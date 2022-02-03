@@ -9,22 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
+ //Option 1 for getting text field data
     
-    @IBOutlet weak var labelOutlet1: UILabel!
+    @IBOutlet weak var labelOutlet: UILabel!
+    @IBOutlet weak var textFieldOutlet: UITextField!
     
-
-    @IBOutlet weak var textField: UITextField!
+    
+   @IBAction func buttonTapped(_ sender: Any) {
+        
+        labelOutlet.text = textFieldOutlet.text as! String
+        textFieldOutlet.resignFirstResponder()
+    }
+    
+//Option 2 for getting text field data
+    
+/*    @IBAction func primaryActionTriggered(_ sender: Any) {
+        labelOutlet.text = textFieldOutlet.text ?? " "
+        textFieldOutlet.resignFirstResponder()
+    } */
+    
+//Option 3 for getting text field data
+    
     
   //viewDidLoad function
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         
     }
 
-    //button function
-    @IBAction func buttonClick(_ sender: Any) {
-    }
-    
+
+
     
     
     
